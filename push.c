@@ -25,20 +25,17 @@ void push_node(stack_t **stack, int value)
 
 void push(stack_t **stack, unsigned int line_number)
 {
-	char *argument = strtok(NULL, " \n");
-	char *endptr;
-	int value = strtol(argument, &endptr, 10);
+	 char *argument = strtok(NULL, " \n");
+	 int value = atoi(argument);
 
-	if (argument == NULL)
-	{
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
-		exit(EXIT_FAILURE);
-	}
+    if (argument == NULL) {
+        fprintf(stderr, "L%u: usage: push integer\n", line_number);
+        exit(EXIT_FAILURE);
+    }
 
-	if (*endptr != '\0')
-	{
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
-		exit(EXIT_FAILURE);
-	}
-	push_node(stack, value);
+    if (value == 0 && strcmp(argument, "0") != 0) {
+        fprintf(stderr, "L%u: usage: push integer\n", line_number);
+        exit(EXIT_FAILURE);
+    }
+    push_node(stack, value);
 }
