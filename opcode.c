@@ -13,6 +13,7 @@ void opcode_process(stack_t **stack, char *opcode, unsigned int line_number)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"div_d", div_d},
 		{NULL, NULL}
 	};
 	int i = 0;

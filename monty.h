@@ -34,12 +34,12 @@ typedef struct instruction_s
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void exec_opcodes(FILE *file, stack_t **stack);
-void opcode_process(stack_t **stack, char *opcode, unsigned int line_number);
 void push_node(stack_t **stack, int value);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
+void div_d(stack_t **stack, unsigned int line_number);
 
 #endif /*MONTY_H*/

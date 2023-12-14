@@ -48,7 +48,10 @@ int main(int argc, char *argv[]) {
                     add(&stack, line_number);
             }else if (strcmp(token, "nop") == 0){
                     nop(&stack, line_number);
-	    }else {
+	    }else if (strcmp(token, "div_d") == 0){
+		    div_d(&stack, line_number);
+	    }
+	    else {
                 fprintf(stderr, "L%u: unknown instruction %s\n", line_number, token);
                 fclose(file);
                 free(line);
