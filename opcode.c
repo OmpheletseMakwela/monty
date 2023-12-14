@@ -10,6 +10,9 @@ void opcode_process(stack_t **stack, char *opcode, unsigned int line_number)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 	int i = 0;

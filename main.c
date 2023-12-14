@@ -39,10 +39,18 @@ int main(int argc, char *argv[]) {
             } else if (strcmp(token, "pall") == 0) {
                 pall(&stack, line_number);
             }else if (strcmp(token, "pint") == 0) {
-    pint(&stack, line_number);
+		    pint(&stack, line_number);
             }else if (strcmp(token, "pop") == 0){
                     pop(&stack, line_number);
-            }
+            }else if (strcmp(token, "swap") == 0){
+		    swap(&stack, line_number);
+	    }else if (strcmp(token, "add") == 0){
+                    add(&stack, line_number);
+            }else if (strcmp(token, "nop") == 0){
+                    nop(&stack, line_number);
+	    }
+
+
             else {
                 fprintf(stderr, "L%u: unknown instruction %s\n", line_number, token);
                 fclose(file);
