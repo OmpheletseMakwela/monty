@@ -50,6 +50,8 @@ int main(int argc, char *argv[]) {
                     nop(&stack, line_number);
 	    }else if (strcmp(token, "div_d") == 0){
 		    div_d(&stack, line_number);
+	    }else if (strcmp(token, "rotate") == 0){
+		    rotate(&stack, line_number);
 	    }
 	    else {
                 fprintf(stderr, "L%u: unknown instruction %s\n", line_number, token);
